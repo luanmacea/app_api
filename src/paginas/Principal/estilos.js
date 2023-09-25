@@ -7,6 +7,15 @@ const estilos = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 20,
     },
+    botaoLimpar: {
+        backgroundColor: 'gray',
+        padding: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 8,
+        width: '90%',
+        marginTop: 5
+    },
     botao: {
         backgroundColor: '#8A07DA',
         marginTop: 20,
@@ -15,6 +24,11 @@ const estilos = StyleSheet.create({
         justifyContent: 'center',
         borderRadius: 8,
         width: '90%',
+    },
+    textoBotaoLimpar: {
+        // fontWeight: 'bold',
+        fontSize: 16,
+        color: '#fff',
     },
     textoBotao: {
         fontWeight: 'bold',

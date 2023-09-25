@@ -4,9 +4,11 @@ import { Text, View, FlatList, TouchableOpacity } from 'react-native';
 import { pegarRepositorios } from '../../servicos/requisicoes/repositorios';
 
 import estilos from './estilos';
+import { useIsFocused } from '@react-navigation/core';
 
 export default function Repositorios({ route, navigation }) {
   const [repo, setRepo] = useState([]);
+  const estaNaTela = useIsFocused()
 
   useEffect( async () => {
     const resultado = await pegarRepositorios(route.params.id);
@@ -30,7 +32,7 @@ export default function Repositorios({ route, navigation }) {
       renderItem={({ item }) => (
         <TouchableOpacity
         style={estilos.repositorio}
-        onPress={() => navigation.navigate('InfoRepositorio', { id: item.id })}
+        onPress={() => navigation.navigate('InfoRepositorio', { item })}
         >
           <Text style={estilos.repositorioNome}>{item.name}</Text>
           <Text style={estilos.repositorioData}>Atualiado em {item.data}</Text>

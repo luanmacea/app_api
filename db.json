@@ -21,12 +21,6 @@
   ],
   "repos": [
     {
-      "nome": "api-escolas 3",
-      "data": "1 de jan. de 2021",
-      "postId": 1,
-      "id": 2
-    },
-    {
       "name": "2313123 asdasd 2323",
       "data": "1 de jan. de 2021",
       "postId": 1,
@@ -57,10 +51,10 @@
       "postId": 2
     },
     {
-      "nome": "Alura_cursos 3",
-      "data": "1 de jan. de 20213 ",
+      "name": "asdadsadad",
+      "data": "2132131243",
       "postId": 1,
-      "id": 5
+      "id": 6
     }
   ]
 }

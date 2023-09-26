@@ -32,7 +32,7 @@ export default function Principal({ navigation }) {
             <View style={estilos.imagemArea}>
               <Image source={{ uri: usuario.avatar_url }} style={estilos.imagem} />
             </View>
-            <Text style={estilos.textoNome}>{usuario.name}</Text>
+            <Text style={estilos.textoNome}>{usuario.login}</Text>
             <Text style={estilos.textoEmail}>{usuario.email}</Text>
             <View style={estilos.seguidoresArea}>
               <View style={estilos.seguidores}>

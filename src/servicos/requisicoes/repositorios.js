@@ -1,12 +1,12 @@
 import api from "../api";
 
-export async function pegarRepositorios(id) {
+export async function pegarRepositorios(login) {
   try {
-    const response = await api.get(`/repos?postId=${id}`);
-    return response.data;
+    const resultado = await api.get(`/users/${login}/repos`);
+    return resultado.data
   }
   catch (error) {
-    console.log(error);
+    console.log(error)
     return []
   }
 }
@@ -18,6 +18,43 @@ export async function salvarRepositoriosDoUsuario(postId, nome, data, id) {
       data: data,
       postId: postId
     });
+    return 'sucesso'
+  }
+  catch (error) {
+    console.log(error)
+    return 'erro'
+  }
+}
+
+export async function pesquisarRepositorios(repositorio) {
+  try {
+    const response = await api.get(`/repos?name=${repositorio}`);
+    return response.data;
+  }
+  catch (error) {
+    console.log(error);
+    return []
+  }
+}
+
+export async function criarRepositoriosDoUsuario(postId, nome, data) {
+  try {
+    await api.post(`/repos/`, {
+      name: nome,
+      data: data,
+      postId: postId
+    });
+    return 'sucesso'
+  }
+  catch (error) {
+    console.log(error)
+    return 'erro'
+  }
+}
+
+export async function deletarRepositoriosDoUsuario(id) {
+  try {
+    await api.delete(`/repos/${id}`);
     return 'sucesso'
   }
   catch (error) {

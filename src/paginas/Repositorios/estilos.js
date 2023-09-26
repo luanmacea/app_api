@@ -7,6 +7,12 @@ const estilos = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
+    pesquisa: {
+        width: '90%',
+        // backgroundColor: '#ddd',
+        borderRadius: 8,
+        
+    },
     repositoriosTexto: {
         fontSize: 21,
         fontWeight: '600',
@@ -52,6 +58,20 @@ const estilos = StyleSheet.create({
         fontSize: 16,
         color: '#FFF',
     },
+    botaoPesquisa: {
+        backgroundColor: 'red',
+        padding: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderRadius: 8,
+    },
+    entrada: {
+        borderWidth: 2,
+        borderColor: '#ddd',
+        paddingHorizontal: 20,
+        fontSize: 16,
+        color: '#444',
+    }
 });
 
 

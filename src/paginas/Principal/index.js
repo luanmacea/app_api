@@ -44,7 +44,7 @@ export default function Principal({ navigation }) {
                 <Text style={estilos.seguidoresTexto}>Seguindo</Text>
               </View>
             </View>
-            <TouchableOpacity onPress={() => navigation.navigate('Repositorios', {id: usuario.id })}>
+            <TouchableOpacity onPress={() => navigation.navigate('Repositorios', {id: usuario.login })}>
               <Text style={estilos.repositorios}>
                 Ver os repositórios
               </Text>

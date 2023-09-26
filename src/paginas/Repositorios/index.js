@@ -13,7 +13,7 @@ export default function Repositorios({ route, navigation }) {
 
   useEffect(() => {
     const teste = async () => {
-      const resultado = await pegarRepositorios(route.params.login)
+      const resultado = await pegarRepositorios(route.params.id)
         setRepo(resultado)
       console.log(resultado)
     }
